@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Magic the Gathering</title>
+        <link rel="stylesheet" href="style/main.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Magic</h1>
+            <div id="filterSearch">
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Search Cards..."
+                    aria-label="Search Cards"
+                />
+                <select name="sort-set" id="sort-set">
+                    <option value="all" selected>All sets</option>
+                    <option value="fra">Reality Fracture</option>
+                    <option value="hob">The Hobbit</option>
+                </select>
+                <select name="sort-rarity" id="sort-rarity">
+                    <option value="mythic" selected>Mythic - Common</option>
+                    <option value="common">Common - Mythic</option>
+                </select>
+                <select name="sort-creature" id="sort-creature">
+                    <option value="all" selected>All types</option>
+                    <option value="creature">Creatures</option>
+                </select>
+                <select name="favourite-filter" id="favourite-filter">
+                    <option value="all" selected>All Cards</option>
+                    <option value="favourites">Show Favourites Only</option>
+                </select>
+                <button id="resetFilter">Reset Filters</button>
+                <button id="darkmode">Dark Mode</button>
+            </div>
+        </header>
+
+        <p id="status">retrieving data from api</p>
+        <div id="magic-cards"></div>
+
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script src="javascript/main.js"></script>
+    </body>
+</html>
